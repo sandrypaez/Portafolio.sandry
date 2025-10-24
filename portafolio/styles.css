@@ -245,3 +245,166 @@
     padding: 1rem;
     margin-top: 2rem;
   }
+
+
+  /* --- Línea de tiempo --- */
+.timeline {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #fff9fb, #ffeef8);
+  }
+  
+  .timeline h2 {
+    color: #e75480;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ffd6e7;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+  }
+  
+  .timeline-item {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-item .content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .timeline-item.left {
+    left: 0;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+  }
+  
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #e75480;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item.left::before {
+    right: -10px;
+  }
+  
+  .timeline-item.right::before {
+    left: -10px;
+  }
+  
+  .timeline-item .content span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Animación suave al aparecer */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .timeline-item .content {
+    animation: slideIn 1s ease forwards;
+  }
+  
+  /* --- Responsive para línea de tiempo --- */
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+      left: 31px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding-left: 4rem;
+      padding-right: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .timeline-item.right {
+      left: 0;
+    }
+  
+    .timeline-item::before {
+      left: 15px;
+    }
+  
+    .timeline h2 {
+      font-size: 1.6rem;
+    }
+  
+    .timeline-item .content {
+      padding: 1.2rem;
+    }
+  }
+  
+  /* --- Modo oscuro --- */
+body.dark-mode {
+    background: #661158;
+    color: #ddd;
+  }
+  
+  body.dark-mode .navbar {
+    background: #3f053a;
+  }
+  
+  body.dark-mode .nav-links a {
+    color: #ddd;
+  }
+  
+  body.dark-mode .inicio {
+    background: linear-gradient(120deg, #530353, #c54677);
+    color: #fff;
+  }
+  
+  body.dark-mode .card {
+    background: #520845;
+    color: #ddd;
+  }
+  
+  body.dark-mode .timeline-container::after {
+    background-color: #741577;
+  }
+  
+  body.dark-mode .timeline-item .content {
+    background-color: #2c2c3d;
+    color: #ffffff;
+  }
+  
+  body.dark-mode footer {
+    background: #3e0441;
+  }
+  

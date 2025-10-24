@@ -21,13 +21,18 @@
  </nav>
  </header>
 
+    <!-- Botón de modo oscuro -->
+    <button id="toggle-dark" class="btn secundario">🌙 Modo Oscuro</button>
+  </nav>
+  
+
  <!-- Sección Inicio -->
  <section id="inicio" class="inicio">
- <div class="presentacion">
+ <div class="presentacion fade-up">
  <img src="https://img.buzzfeed.com/buzzfeed-static/static/2025-03/13/18/subbuzz/UjLcjUoUE0.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" alt="Foto de Sandrith" class="foto">
  <div class="texto">
  <h2>Hola, soy <span>Sandrith Carolina Páez Rincón</span> 💕</h2>
- <h3>Desarrolladora de Software 💻</h3>
+ <h3 class="efecto-escritura"></h3>
  <p>Apasionada por el desarrollo de software, comprometida con el aprendizaje continuo y enfocada en construir soluciones tecnológicas que generen impacto.</p>
  <div class="botones">
  <a href="#proyectos" class="btn primario">🌷 Ver Proyectos</a>
@@ -38,7 +43,7 @@
  </section>
 
  <!-- Sobre mí -->
- <section id="sobre-mi" class="sobre-mi">
+ <section id="sobre-mi" class="sobre-mi fade-up">
  <h2>Sobre mí 💫</h2>
  <p>Tengo 17 años, soy de Chimila, Cesar, y estudio <strong>Desarrollo de Software</strong> en Campus Lands. Me encanta programar, diseñar y aprender nuevas tecnologías. 
  Soy una persona resiliente, creativa y con muchas ganas de crecer profesionalmente. 💖</p>
@@ -56,8 +61,34 @@
  </div>
  </section>
 
+ <section id="experiencia" class="timeline">
+    <h2>Mi trayectoria 💼</h2>
+    <div class="timeline-container">
+  
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Campus Lands</h3>
+          <p><strong>Desarrollo de Software</strong></p>
+          <span>2023 - Presente</span>
+          <p>Formación práctica en desarrollo web, liderazgo y trabajo en equipo. He creado proyectos con HTML, CSS, JavaScript y Python.</p>
+        </div>
+      </div>
+  
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Proyectos Personales</h3>
+          <span>2024 - Presente</span>
+          <p>Desarrollo de aplicaciones web modernas con enfoque en la experiencia de usuario, integrando animaciones y diseño responsive.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
  <!-- Proyectos -->
- <section id="proyectos" class="proyectos">
+ <section id="proyectos" class="proyectos fade-up">
  <h2>Mis proyectos 🌼</h2>
  <div class="grid-proyectos">
 
@@ -92,7 +123,7 @@
  </section>
 
  <!-- Contacto -->
- <section id="contacto" class="contacto">
+ <section id="contacto" class="contacto fade-up">
  <h2>Contáctame 💌</h2>
  <form id="formulario">
  <input type="text" placeholder="Tu nombre" required>
@@ -115,3 +146,4 @@
  <script src="scritp.js"></script>
 </body>
 </html>
+
