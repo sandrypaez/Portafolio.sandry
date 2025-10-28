@@ -1,149 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Sandrith Carolina Páez Rincón 🌸 | Portafolio</title>
- <link rel="stylesheet" href="styles.css">
- <script src="https://kit.fontawesome.com/a2d04d5d7e.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio | Sandrith Carolina Páez</title>
+  <meta name="description" content="Portafolio profesional de Sandrith Carolina Páez - Desarrolladora de Software" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- EmailJS (ya usado en script.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
- <!-- Encabezado -->
- <header>
- <nav class="navbar">
- <h1 class="logo">🌸 Sandrith Páez</h1>
- <ul class="nav-links">
- <li><a href="#inicio">Inicio</a></li>
- <li><a href="#sobre-mi">Sobre mí</a></li>
- <li><a href="#proyectos">Proyectos</a></li>
- <li><a href="#contacto">Contacto</a></li>
- </ul>
- </nav>
- </header>
-
-    <!-- Botón de modo oscuro -->
-    <button id="toggle-dark" class="btn secundario">🌙 Modo Oscuro</button>
-  </nav>
-  
-
- <!-- Sección Inicio -->
- <section id="inicio" class="inicio">
- <div class="presentacion fade-up">
- <img src="https://img.buzzfeed.com/buzzfeed-static/static/2025-03/13/18/subbuzz/UjLcjUoUE0.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" alt="Foto de Sandrith" class="foto">
- <div class="texto">
- <h2>Hola, soy <span>Sandrith Carolina Páez Rincón</span> 💕</h2>
- <h3 class="efecto-escritura"></h3>
- <p>Apasionada por el desarrollo de software, comprometida con el aprendizaje continuo y enfocada en construir soluciones tecnológicas que generen impacto.</p>
- <div class="botones">
- <a href="#proyectos" class="btn primario">🌷 Ver Proyectos</a>
- <a href="#contacto" class="btn secundario">✨ Contáctame</a>
- </div>
- </div>
- </div>
- </section>
-
- <!-- Sobre mí -->
- <section id="sobre-mi" class="sobre-mi fade-up">
- <h2>Sobre mí 💫</h2>
- <p>Tengo 17 años, soy de Chimila, Cesar, y estudio <strong>Desarrollo de Software</strong> en Campus Lands. Me encanta programar, diseñar y aprender nuevas tecnologías. 
- Soy una persona resiliente, creativa y con muchas ganas de crecer profesionalmente. 💖</p>
- <br>
- <div class="skills">
- <h3>Mis habilidades</h3>
- <div class="tags">
- <a href=""><span>🐍 Python</span></a>
- <a href=""><span>💻 JavaScript</span></a>
- <a href=""><span>🌸 HTML / CSS</span></a>
- <a href=""><span>🗃️ MySQL</span></a>
- <a href=""><span>🧠 Git / GitHub</span></a>
- <a href=""><span>✨ VSCode</span></a>
- </div>
- </div>
- </section>
-
- <section id="experiencia" class="timeline">
-    <h2>Mi trayectoria 💼</h2>
-    <div class="timeline-container">
-  
-      <div class="timeline-item left">
-        <div class="content">
-          <h3>Campus Lands</h3>
-          <p><strong>Desarrollo de Software</strong></p>
-          <span>2023 - Presente</span>
-          <p>Formación práctica en desarrollo web, liderazgo y trabajo en equipo. He creado proyectos con HTML, CSS, JavaScript y Python.</p>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-emoji">💖</span>
+        <h1 class="brand-title">Sandrith Páez</h1>
       </div>
-  
-      <div class="timeline-item right">
-        <div class="content">
-          <h3>Proyectos Personales</h3>
-          <span>2024 - Presente</span>
-          <p>Desarrollo de aplicaciones web modernas con enfoque en la experiencia de usuario, integrando animaciones y diseño responsive.</p>
-        </div>
+
+      <nav class="main-nav" aria-label="Menú principal">
+        <a href="#perfil" data-es="Perfil" data-en="Profile">Perfil</a>
+        <a href="#video" data-es="Presentación" data-en="Presentation">Presentación</a>
+        <a href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a>
+        <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+      </nav>
+
+      <div class="actions">
+        <button id="language-toggle" class="btn-ghost" aria-label="Cambiar idioma">EN</button>
+        <button id="toggle-dark" class="btn-ghost" aria-label="Cambiar modo">🌙</button>
       </div>
-  
     </div>
-  </section>
-  
+  </header>
 
+  <main>
+    <!-- PERFIL -->
+    <section id="perfil" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-card">
+          <div class="avatar-wrap">
+            <!-- Usa el archivo que subiste: perfil.jpg -->
+            <img src="perfil.jpg" alt="Foto de Sandrith" class="avatar" />
+          </div>
 
- <!-- Proyectos -->
- <section id="proyectos" class="proyectos fade-up">
- <h2>Mis proyectos 🌼</h2>
- <div class="grid-proyectos">
+          <div class="hero-content">
+            <h2 class="hero-hi"><span data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</span></h2>
+            <h1 class="hero-name">Sandrith Carolina Páez</h1>
+            <p class="hero-bio" data-es="Desarrolladora web apasionada por la tecnología, el diseño digital y la innovación."
+               data-en="Web developer passionate about technology, digital design and innovation.">
+              Desarrolladora web apasionada por la tecnología, el diseño digital y la innovación.
+            </p>
 
- <div class="card">
- <div class="card-img" style="background-image: url('https://i.pinimg.com/736x/da/6c/83/da6c83836f3637e7e3533589d0e7b893.jpg');"></div>
- <div class="card-body">
- <h3>📊 Sistema de Gestión de Población</h3>
- <p>Aplicación Python para analizar datos demográficos con consultas SQL y reportes.</p>
- <p><strong>Tecnologías:</strong> Python, SQL, Pandas</p>
- </div>
- </div>
+            <div class="hero-cta">
+              <a href="#proyectos" class="btn primary" data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</a>
+              <a href="#contacto" class="btn outline" data-es="Contáctame" data-en="Contact Me">Contáctame</a>
+              <!-- Descargar CV - sustituye href por tu CV real -->
+              <a href="assets/CV_Sandrith_Paez.pdf" download class="btn ghost" data-es="Descargar CV" data-en="Download CV">Descargar CV</a>
+            </div>
 
- <div class="card">
- <div class="card-img" style="background-image: url('https://i.pinimg.com/736x/22/a9/4c/22a94c9e144cc92b27dbd04dce2dfb80.jpg');"></div>
- <div class="card-body">
- <h3>🐾 Gestión de Veterinaria</h3>
- <p>Aplicación web con JS modular y asincronía para gestión de mascotas y dueños.</p>
- <p><strong>Tecnologías:</strong> JS, HTML, CSS</p>
- </div>
- </div>
+            <div class="social-inline" aria-label="Redes sociales">
+              <a href="https://github.com/sandrypaez" target="_blank" rel="noopener" title="GitHub">🐱 GitHub</a>
+              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank" rel="noopener" title="LinkedIn">💼 LinkedIn</a>
+              <a href="https://www.instagram.com/sandry_paez_07" target="_blank" rel="noopener" title="Instagram">📸 Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <div class="card">
- <div class="card-img" style="background-image: url('https://i.pinimg.com/736x/a1/04/17/a10417cfc2b12e4b4d1f5de97b1ce6b2.jpg');"></div>
- <div class="card-body">
- <h3>🌾 Finca de Producción Agrícola</h3>
- <p>Proyecto MySQL con funciones, triggers y eventos programados para automatizar tareas.</p>
- <p><strong>Tecnologías:</strong> MySQL, DBeaver</p>
- </div>
- </div>
+    <!-- VIDEO -->
+    <section id="video" class="section section--light">
+      <div class="container">
+        <h2 class="section-title">🎥 <span data-es="Video de Presentación" data-en="Presentation Video">Video de Presentación</span></h2>
 
- </div>
- </section>
+        <div class="media-wrap">
+          <!-- Reemplaza el src del iframe con tu video de YouTube si lo tienes -->
+          <div class="video-card">
+            <!-- Si prefieres archivo local usa <video> en vez de iframe -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="Video de presentación" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <!-- Contacto -->
- <section id="contacto" class="contacto fade-up">
- <h2>Contáctame 💌</h2>
- <form id="formulario">
- <input type="text" placeholder="Tu nombre" required>
- <input type="email" placeholder="Tu correo" required>
- <textarea placeholder="Tu mensaje..." required></textarea>
- <button type="submit" class="btn primario">Enviar 💫</button>
- </form>
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <h2 class="section-title">💡 <span data-es="Habilidades Técnicas y Blandas" data-en="Technical & Soft Skills">Habilidades Técnicas y Blandas</span></h2>
 
- <div class="redes">
- <a href="mailto:sandrypaez0727@gmail.com"><i class="fas fa-envelope"></i></a>
- <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
- <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
- </div>
- </section>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>🛠️ <span data-es="Técnicas" data-en="Technical">Técnicas</span></h3>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Firebase, MySQL / PostgreSQL</li>
+              <li>Git / GitHub</li>
+              <li>Responsive & UI/UX</li>
+            </ul>
 
- <footer>
- <p>© 2025 Sandrith Carolina Páez Rincón | 🌸 Desarrolladora de Software</p>
- </footer>
+            <div class="skill-bars">
+              <div class="bar">
+                <label>HTML/CSS</label>
+                <div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div>
+              </div>
+              <div class="bar">
+                <label>JavaScript</label>
+                <div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div>
+              </div>
+              <div class="bar">
+                <label>Bases de datos</label>
+                <div class="bar-track"><div class="bar-fill" style="--w:75%"></div></div>
+              </div>
+            </div>
+          </div>
 
- <script src="scritp.js"></script>
+          <div class="skill-card">
+            <h3>🌸 <span data-es="Blandas" data-en="Soft">Blandas</span></h3>
+            <ul>
+              <li>Comunicación asertiva</li>
+              <li>Trabajo en equipo</li>
+              <li>Creatividad e innovación</li>
+              <li>Responsabilidad y empatía</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section section--light">
+      <div class="container">
+        <h2 class="section-title">🚀 <span data-es="Proyectos" data-en="Projects">Proyectos</span></h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb" style="background-image:url('proyecto1.jpg')"></div>
+            <div class="project-body">
+              <h3>App Bancaria Web</h3>
+              <p>Simulación funcional de app bancaria con QR, tarjeta virtual y saldo dinámico.</p>
+              <a href="https://github.com/sandrypaez/app-bancaria" target="_blank" rel="noopener" class="link">Ver en GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" style="background-image:url('proyecto2.jpg')"></div>
+            <div class="project-body">
+              <h3>Gestión de Películas</h3>
+              <p>Sistema de gestión de alquileres con SQL y panel administrativo.</p>
+              <a href="https://github.com/sandrypaez/movierental" target="_blank" rel="noopener" class="link">Ver en GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="container contact-wrap">
+        <div class="contact-left">
+          <h2 class="section-title">📬 <span data-es="Contáctame" data-en="Contact Me">Contáctame</span></h2>
+          <p data-es="Escribe un mensaje y te responderé pronto." data-en="Write me a message and I'll reply soon.">
+            Escribe un mensaje y te responderé pronto.
+          </p>
+
+          <form id="contact-form" class="contact-form" aria-label="Formulario de contacto">
+            <label class="field">
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
+            </label>
+            <label class="field">
+              <input type="email" name="email" placeholder="Tu correo" required />
+            </label>
+            <label class="field">
+              <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Enviar mensaje</button>
+              <button type="button" id="print-btn" class="btn outline">Imprimir / CV</button>
+            </div>
+            <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-right">
+          <div class="profile-card">
+            <img src="perfil.jpg" alt="Foto de Sandrith" />
+            <h3>Sandrith Carolina Páez</h3>
+            <p>Desarrolladora de Software</p>
+            <div class="social-list">
+              <a href="https://github.com/sandrypaez" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank">LinkedIn</a>
+              <a href="https://www.instagram.com/sandry_paez_07" target="_blank">Instagram</a>
+            </div>
+          </div>
+          <div class="contact-info">
+            <h4>Información</h4>
+            <p>📍 Chimila, Cesar — Colombia</p>
+            <p>✉️ <a href="mailto:sandrypaez0727@gmail.com">sandrypaez0727@gmail.com</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Sandrith Carolina Páez Rincón — Creado con ❤</p>
+    </div>
+  </footer>
 </body>
 </html>
-
