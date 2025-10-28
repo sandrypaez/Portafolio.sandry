@@ -6,11 +6,11 @@
   <title>Portafolio | Sandrith Carolina Páez</title>
   <meta name="description" content="Portafolio profesional de Sandrith Carolina Páez - Desarrolladora de Software" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- EmailJS (ya usado en script.js) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="scritp.js" defer></script>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -39,30 +39,40 @@
       <div class="container hero-inner">
         <div class="hero-card">
           <div class="avatar-wrap">
-            <!-- Usa el archivo que subiste: perfil.jpg -->
-            <img src="perfil.jpg" alt="Foto de Sandrith" class="avatar" />
+            <img src="imagenes/perfil.jpg" alt="Foto de Sandrith" class="avatar" />
           </div>
-
           <div class="hero-content">
-            <h2 class="hero-hi"><span data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</span></h2>
+            <h2 class="hero-hi" data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</h2>
             <h1 class="hero-name">Sandrith Carolina Páez</h1>
             <p class="hero-bio" data-es="Desarrolladora web apasionada por la tecnología, el diseño digital y la innovación."
                data-en="Web developer passionate about technology, digital design and innovation.">
               Desarrolladora web apasionada por la tecnología, el diseño digital y la innovación.
             </p>
-
             <div class="hero-cta">
               <a href="#proyectos" class="btn primary" data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</a>
               <a href="#contacto" class="btn outline" data-es="Contáctame" data-en="Contact Me">Contáctame</a>
-              <!-- Descargar CV - sustituye href por tu CV real -->
-              <a href="assets/CV_Sandrith_Paez.pdf" download class="btn ghost" data-es="Descargar CV" data-en="Download CV">Descargar CV</a>
+              <a href="imagenes/hojadevida.pdf" download class="btn ghost" data-es="Descargar CV" data-en="Download CV">Descargar CV</a>
             </div>
 
+            <!-- Redes sociales con íconos -->
             <div class="social-inline" aria-label="Redes sociales">
-              <a href="https://github.com/sandrypaez" target="_blank" rel="noopener" title="GitHub">🐱 GitHub</a>
-              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank" rel="noopener" title="LinkedIn">💼 LinkedIn</a>
-              <a href="https://www.instagram.com/sandry_paez_07" target="_blank" rel="noopener" title="Instagram">📸 Instagram</a>
+              <a href="https://github.com/sandrypaez" target="_blank" rel="noopener" title="GitHub" class="social-btn">
+                <img src="imagenes/github.jpg" alt="GitHub" width="30" height="30"/>
+              </a>
+              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank" rel="noopener" title="LinkedIn" class="social-btn">
+                <img src="imagenes/linkedin.jpg" alt="LinkedIn" width="30" height="30"/>
+              </a>
+              <a href="https://www.instagram.com/sandry_paez_07" target="_blank" rel="noopener" title="Instagram" class="social-btn">
+                <img src="imagenes/instagram.jpg" alt="Instagram" width="30" height="30"/>
+              </a>
+              <a href="imagenes/hojadevida.pdf" target="_blank" class="social-btn" title="Ver CV">
+                <img src="imagenes/cv.jpg" alt="CV" width="30" height="30"/>
+              </a>
+              <a href="https://wa.me/573012345678" target="_blank" class="social-btn" title="WhatsApp">
+                <img src="imagenes/WhatsApp.jpg" alt="WhatsApp" width="30" height="30"/>
+              </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -72,14 +82,12 @@
     <section id="video" class="section section--light">
       <div class="container">
         <h2 class="section-title">🎥 <span data-es="Video de Presentación" data-en="Presentation Video">Video de Presentación</span></h2>
-
         <div class="media-wrap">
-          <!-- Reemplaza el src del iframe con tu video de YouTube si lo tienes -->
           <div class="video-card">
-            <!-- Si prefieres archivo local usa <video> en vez de iframe -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="Video de presentación" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+            <video controls width="100%" height="520" style="border-radius:16px; display:block;">
+              <source src="presentacion.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
           </div>
         </div>
       </div>
@@ -89,7 +97,6 @@
     <section id="habilidades" class="section">
       <div class="container">
         <h2 class="section-title">💡 <span data-es="Habilidades Técnicas y Blandas" data-en="Technical & Soft Skills">Habilidades Técnicas y Blandas</span></h2>
-
         <div class="skills-grid">
           <div class="skill-card">
             <h3>🛠️ <span data-es="Técnicas" data-en="Technical">Técnicas</span></h3>
@@ -99,23 +106,12 @@
               <li>Git / GitHub</li>
               <li>Responsive & UI/UX</li>
             </ul>
-
             <div class="skill-bars">
-              <div class="bar">
-                <label>HTML/CSS</label>
-                <div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div>
-              </div>
-              <div class="bar">
-                <label>JavaScript</label>
-                <div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div>
-              </div>
-              <div class="bar">
-                <label>Bases de datos</label>
-                <div class="bar-track"><div class="bar-fill" style="--w:75%"></div></div>
-              </div>
+              <div class="bar"><label>HTML/CSS</label><div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div></div>
+              <div class="bar"><label>JavaScript</label><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div></div>
+              <div class="bar"><label>Bases de datos</label><div class="bar-track"><div class="bar-fill" style="--w:75%"></div></div></div>
             </div>
           </div>
-
           <div class="skill-card">
             <h3>🌸 <span data-es="Blandas" data-en="Soft">Blandas</span></h3>
             <ul>
@@ -133,19 +129,17 @@
     <section id="proyectos" class="section section--light">
       <div class="container">
         <h2 class="section-title">🚀 <span data-es="Proyectos" data-en="Projects">Proyectos</span></h2>
-
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-thumb" style="background-image:url('proyecto1.jpg')"></div>
+            <div class="project-thumb" style="background-image:url('imagenes/proyectobanco.jpg')"></div>
             <div class="project-body">
               <h3>App Bancaria Web</h3>
               <p>Simulación funcional de app bancaria con QR, tarjeta virtual y saldo dinámico.</p>
               <a href="https://github.com/sandrypaez/app-bancaria" target="_blank" rel="noopener" class="link">Ver en GitHub</a>
             </div>
           </article>
-
           <article class="project-card">
-            <div class="project-thumb" style="background-image:url('proyecto2.jpg')"></div>
+            <div class="project-thumb" style="background-image:url('imagenes/proyectolibros.jpg')"></div>
             <div class="project-body">
               <h3>Gestión de Películas</h3>
               <p>Sistema de gestión de alquileres con SQL y panel administrativo.</p>
@@ -167,18 +161,18 @@
 
           <form id="contact-form" class="contact-form" aria-label="Formulario de contacto">
             <label class="field">
-              <input type="text" name="nombre" placeholder="Tu nombre" required />
+              <input type="text" name="nombre" placeholder="Tu nombre" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" required />
             </label>
             <label class="field">
-              <input type="email" name="email" placeholder="Tu correo" required />
+              <input type="email" name="email" placeholder="Tu correo" data-es-placeholder="Tu correo" data-en-placeholder="Your email" required />
             </label>
             <label class="field">
-              <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+              <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." data-es-placeholder="Tu mensaje..." data-en-placeholder="Your message..." required></textarea>
             </label>
 
             <div class="form-actions">
-              <button type="submit" class="btn primary">Enviar mensaje</button>
-              <button type="button" id="print-btn" class="btn outline">Imprimir / CV</button>
+              <button type="submit" class="btn primary" data-es="Enviar mensaje" data-en="Send Message">Enviar mensaje</button>
+              <button type="button" id="print-btn" class="btn outline" data-es="Imprimir / CV" data-en="Print / CV">Imprimir / CV</button>
             </div>
             <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
           </form>
@@ -186,19 +180,31 @@
 
         <aside class="contact-right">
           <div class="profile-card">
-            <img src="perfil.jpg" alt="Foto de Sandrith" />
+            <img src="imagenes/perfil.jpg" alt="Foto de Sandrith" />
             <h3>Sandrith Carolina Páez</h3>
-            <p>Desarrolladora de Software</p>
+            <p>Desarrolladora de Software | Frontend / Backend</p>
             <div class="social-list">
-              <a href="https://github.com/sandrypaez" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank">LinkedIn</a>
-              <a href="https://www.instagram.com/sandry_paez_07" target="_blank">Instagram</a>
+              <a href="https://github.com/sandrypaez" target="_blank" title="GitHub">
+                <img src="imagenes/github.jpg" alt="GitHub" width="25" height="25"/>
+              </a>
+              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank" title="LinkedIn">
+                <img src="imagenes/linkedin.jpg" alt="LinkedIn" width="25" height="25"/>
+              </a>
+              <a href="https://www.instagram.com/sandry_paez_07" target="_blank" title="Instagram">
+                <img src="imagenes/instagram.jpg" alt="Instagram" width="25" height="25"/>
+              </a>
+              <a href="imagenes/hojadevida.pdf" download title="Descargar CV">
+                <img src="imagenes/cv.jpg" alt="CV" width="25" height="25"/>
+              </a>
+              <a href="https://wa.me/573012345678" target="_blank" title="WhatsApp">
+                <img src="imagenes/WhatsApp.jpg" alt="WhatsApp" width="25" height="25"/>
+              </a>
             </div>
           </div>
           <div class="contact-info">
             <h4>Información</h4>
-            <p>📍 Chimila, Cesar — Colombia</p>
-            <p>✉️ <a href="mailto:sandrypaez0727@gmail.com">sandrypaez0727@gmail.com</a></p>
+            <p>📍 Florida Blanca, Bucaramanga — Colombia</p>
+            <p>📱 <a href="https://wa.me/573214154194" target="_blank">+57 321 415 4194</a></p>
           </div>
         </aside>
       </div>
@@ -207,8 +213,9 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Sandrith Carolina Páez Rincón — Creado con ❤</p>
+      <p>© 2025 Sandrith Carolina Páez Rincón — Creado con ❤️ y código futurista</p>
     </div>
   </footer>
+
 </body>
 </html>
