@@ -30,10 +30,8 @@ Soy **Sandrith Carolina Páez**, desarrolladora de software apasionada por la te
 ## 🌐 Portafolio Web
 Visita mi portafolio interactivo y futurista, donde podrás ver mis proyectos, habilidades y un video de presentación:  
 
-🔗 **[Abrir Portafolio](https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/)**  
+🔗 **[Abrir Portafolio](https://sandrypaez.github.io/Portafolio.sandry/)**  
 
-> Reemplaza `TU_USUARIO` y `NOMBRE_DEL_REPOSITORIO` con los valores correctos de tu GitHub.  
-> Por ejemplo: `https://sandrypaez.github.io/portafolio/`
 
 ---
 
