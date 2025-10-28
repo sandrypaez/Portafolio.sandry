@@ -30,7 +30,7 @@ Soy **Sandrith Carolina Páez**, desarrolladora de software apasionada por la te
 ## 🌐 Portafolio Web
 Visita mi portafolio interactivo y futurista, donde podrás ver mis proyectos, habilidades y un video de presentación:  
 
-🔗 **[Abrir Portafolio](https://sandrypaez.github.io/Portafolio.sandry/)**  
+🔗 **[Abrir Portafolio]([https://sandrypaez.github.io/Portafolio.sandry/](http://127.0.0.1:5500/portafolio/index.html))**  
 
 
 ---
