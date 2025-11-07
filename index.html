@@ -6,10 +6,17 @@
   <title>Portafolio | Sandrith Carolina Páez</title>
   <meta name="description" content="Portafolio profesional de Sandrith Carolina Páez - Desarrolladora de Software" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Partículas de fondo -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="scritp.js" defer></script>
 </head>
 <body>
+
+  <!-- Fondo animado de partículas -->
+  <div id="particles-js"></div>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -54,7 +61,6 @@
               <a href="imagenes/hojadevida.pdf" download class="btn ghost" data-es="Descargar CV" data-en="Download CV">Descargar CV</a>
             </div>
 
-            <!-- Redes sociales con íconos -->
             <div class="social-inline" aria-label="Redes sociales">
               <a href="https://github.com/sandrypaez" target="_blank" rel="noopener" title="GitHub" class="social-btn">
                 <img src="imagenes/github.jpg" alt="GitHub" width="30" height="30"/>
@@ -68,11 +74,7 @@
               <a href="imagenes/hojadevida.pdf" target="_blank" class="social-btn" title="Ver CV">
                 <img src="imagenes/cv.jpg" alt="CV" width="30" height="30"/>
               </a>
-              <a href="https://wa.me/573214154194" target="_blank" class="social-btn" title="WhatsApp">
-                <img src="imagenes/WhatsApp.jpg" alt="WhatsApp" width="30" height="30"/>
-              </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -98,7 +100,6 @@
       <div class="container">
         <h2 class="section-title">💡 <span data-es="Habilidades Técnicas y Blandas" data-en="Technical & Soft Skills">Habilidades Técnicas y Blandas</span></h2>
         <div class="skills-grid">
-          <!-- HABILIDADES TÉCNICAS -->
           <div class="skill-card">
             <h3>🛠️ <span data-es="Técnicas" data-en="Technical">Técnicas</span></h3>
             <ul>
@@ -107,14 +108,8 @@
               <li>Git / GitHub</li>
               <li>Responsive & UI/UX</li>
             </ul>
-            <div class="skill-bars">
-              <div class="bar"><label>HTML/CSS</label><div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div></div>
-              <div class="bar"><label>JavaScript</label><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div></div>
-              <div class="bar"><label>Bases de datos</label><div class="bar-track"><div class="bar-fill" style="--w:75%"></div></div></div>
-            </div>
           </div>
 
-          <!-- HABILIDADES BLANDAS -->
           <div class="skill-card soft-skills">
             <h3>🌸 <span data-es="Blandas" data-en="Soft">Blandas</span></h3>
             <ul>
@@ -127,12 +122,6 @@
               <li>Resolución de problemas</li>
               <li>Liderazgo</li>
             </ul>
-            <div class="skill-bars">
-              <div class="bar"><label>Comunicación</label><div class="bar-track"><div class="bar-fill" style="--w:90%"></div></div></div>
-              <div class="bar"><label>Trabajo en equipo</label><div class="bar-track"><div class="bar-fill" style="--w:85%"></div></div></div>
-              <div class="bar"><label>Creatividad</label><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div></div>
-              <div class="bar"><label>Responsabilidad</label><div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div></div>
-            </div>
           </div>
         </div>
       </div>
@@ -172,22 +161,22 @@
             Escribe un mensaje y te responderé pronto.
           </p>
 
-          <form id="contact-form" class="contact-form" aria-label="Formulario de contacto">
+          <form id="contact-form" class="contact-form">
             <label class="field">
-              <input type="text" name="nombre" placeholder="Tu nombre" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" required />
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
             </label>
             <label class="field">
-              <input type="email" name="email" placeholder="Tu correo" data-es-placeholder="Tu correo" data-en-placeholder="Your email" required />
+              <input type="email" name="email" placeholder="Tu correo" required />
             </label>
             <label class="field">
-              <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." data-es-placeholder="Tu mensaje..." data-en-placeholder="Your message..." required></textarea>
+              <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
             </label>
 
             <div class="form-actions">
-              <button type="submit" class="btn primary" data-es="Enviar mensaje" data-en="Send Message">Enviar mensaje</button>
-              <button type="button" id="print-btn" class="btn outline" data-es="Imprimir / CV" data-en="Print / CV">Imprimir / CV</button>
+              <button type="submit" class="btn primary">Enviar mensaje</button>
+              <button type="button" id="print-btn" class="btn outline">Imprimir / CV</button>
             </div>
-            <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+            <div id="form-feedback" class="form-feedback"></div>
           </form>
         </div>
 
@@ -197,21 +186,10 @@
             <h3>Sandrith Carolina Páez</h3>
             <p>Desarrolladora de Software | Frontend / Backend</p>
             <div class="social-list">
-              <a href="https://github.com/sandrypaez" target="_blank" title="GitHub">
-                <img src="imagenes/github.jpg" alt="GitHub" width="25" height="25"/>
-              </a>
-              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank" title="LinkedIn">
-                <img src="imagenes/linkedin.jpg" alt="LinkedIn" width="25" height="25"/>
-              </a>
-              <a href="https://www.instagram.com/sandry_paez_07" target="_blank" title="Instagram">
-                <img src="imagenes/instagram.jpg" alt="Instagram" width="25" height="25"/>
-              </a>
-              <a href="imagenes/hojadevida.pdf" download title="Descargar CV">
-                <img src="imagenes/cv.jpg" alt="CV" width="25" height="25"/>
-              </a>
-              <a href="https://wa.me/573012345678" target="_blank" title="WhatsApp">
-                <img src="imagenes/WhatsApp.jpg" alt="WhatsApp" width="25" height="25"/>
-              </a>
+              <a href="https://github.com/sandrypaez" target="_blank"><img src="imagenes/github.jpg" width="25"/></a>
+              <a href="https://www.linkedin.com/in/sandrith-carolina-p%C3%A1ez-rinc%C3%B3n" target="_blank"><img src="imagenes/linkedin.jpg" width="25"/></a>
+              <a href="https://www.instagram.com/sandry_paez_07" target="_blank"><img src="imagenes/instagram.jpg" width="25"/></a>
+              <a href="imagenes/hojadevida.pdf" download><img src="imagenes/cv.jpg" width="25"/></a>
             </div>
           </div>
           <div class="contact-info">
@@ -230,5 +208,38 @@
     </div>
   </footer>
 
+  <!-- Configuración de partículas -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 100 },
+        "color": { "value": ["#ff00ff", "#00ffff", "#ffffff"] },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#ff66ff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.5,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": { "grab": { "distance": 150, "line_linked": { "opacity": 1 } } }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
